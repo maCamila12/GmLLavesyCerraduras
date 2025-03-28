@@ -1,0 +1,481 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #111;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: yellow;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: yellow;
+    transform: scale(1.1);
+}
+
+.hero {
+    position: relative;
+    background: url('imagenes/iniciar.png') no-repeat center center/cover;
+    color: white;
+    padding: 120px 20px;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+    animation: zoomIn 1.5s ease-out;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    z-index: 2;
+    position: relative;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    z-index: 2;
+    position: relative;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+.hero button {
+    padding: 20px 40px;
+    background-color: yellow;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.4s ease, transform 0.4s ease;
+    z-index: 2;
+    position: relative;
+    animation: pulse 2s infinite;
+}
+
+.hero button:hover {
+    background-color: lightsteelblue;
+    transform: scale(1.1);
+}
+
+.services {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #f1c40f;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.services h2 {
+    font-size: 3.5rem;
+    margin-bottom: 60px;
+    color: black;
+    font-weight: 800;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.7);
+}
+
+.servicios-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.servicio {
+    background: navy;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px (0, 0, 0, 0.2);
+    width: 23%;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+}
+
+.servicio:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.servicio img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.servicio img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.servicio h3 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.sobre-nosotros {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: black;
+    color: black;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.sobre-nosotros h2 {
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.sobre-nosotros p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: white;
+    line-height: 1.8;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.testimonios {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #f1c40f;
+    color: black;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.testimonios h2 {
+    font-size: 3.5rem;
+    margin-bottom: 60px;
+    color: black;
+    font-weight: 800;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6);
+}
+
+.testimonio {
+    background: #fff;
+    padding: 30px;
+    margin: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    margin: 30px auto;
+    font-style: italic;
+    color: #555;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonio:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.testimonio p {
+    font-size: 1.3rem;
+    color: #555;
+}
+
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1200px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+    }
+
+    .services h2 {
+        font-size: 2.5rem;
+    }
+
+    .servicios-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .servicio {
+        width: 100%;
+    }
+
+    .sobre-nosotros h2 {
+        font-size: 2.5rem;
+    }
+
+    .testimonios h2 {
+        font-size: 2.5rem;
+    }
+
+    footer {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .services h2 {
+        font-size: 2rem;
+    }
+
+    .servicios-grid {
+        flex-direction: column;
+    }
+
+    .servicio {
+        width: 100%;
+    }
+
+    .sobre-nosotros p {
+        font-size: 1.1rem;
+    }
+
+    .testimonios h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: black;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #f4f4f4;
+}
+
+.contacto {
+    background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+    padding: 50px 30px;
+    border-radius: 15px;
+    margin: 50px auto;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.contacto h2 {
+    font-size: 3rem;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.2);
+}
+
+.contacto p {
+    font-size: 1.2rem;
+    color: #d1d1d1;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.contacto ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contacto ul li {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.contacto ul li strong {
+    color: #f0d78c;
+    font-weight: 700;
+}
+
+.contacto ul ul {
+    margin-top: 30px;
+}
+
+.contacto ul ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.contacto ul ul li a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: #d1d1d1;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contacto ul ul li a:hover {
+    color: #f0d78c;
+    transform: scale(1.2);
+}
+
+.contacto ul ul li i {
+    font-size: 2.5rem;
+    color: #f0d78c;
+    transition: transform 0.3s ease;
+}
+
+.contacto ul ul li i:hover {
+    transform: rotate(15deg) scale(1.3);
+}
+
+.contacto:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+    transform: translateY(-5px);
+    transition: all 0.5s ease;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons li a {
+    font-size: 2rem;
+    color: #f0d78c; 
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons li a:hover {
+    color: yellow;
+    transform: scale(1.1);
+}
+ul.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; 
+}
+
+ul.social-icons li {
+    list-style: none;
+}

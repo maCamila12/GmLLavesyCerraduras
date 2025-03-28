@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario Inicio</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <!-- MDB UI Kit CSS (si usas esta librería, de lo contrario puedes eliminarla) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css" rel="stylesheet">
+  <!-- Font Awesome (iconos sociales) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Estilos propios -->
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .form-outline {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .form-control {
+      border-radius: 0.5rem;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border: none;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      background-color: #007bff;
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsividad */
+    @media (max-width: 768px) {
+      .img-fluid {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .form-outline {
+        box-shadow: none;
+        padding: 10px;
+      }
+
+      .btn-primary {
+        width: 100%;
+      }
+    }
+  </style>
+
+</head>
+<body>
+
+<section class="vh-100">
+  <div class="container-fluid h-custom h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      
+      <!-- Columna de Imagen (A la izquierda en pantallas grandes, a la parte superior en móviles) -->
+      <div class="col-md-6 col-lg-6 col-xl-5">
+        <img src="https://static.vecteezy.com/system/resources/previews/010/222/956/non_2x/locksmith-repairing-line-icon-illustration-vector.jpg" class="img-fluid" alt="Icono de cerrajero">
+      </div>
+
+      <!-- Formulario de Inicio de Sesión -->
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form id="loginForm">
+
+          <!-- Iniciar sesión con -->
+          <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start mb-4">
+            <p class="lead fw-normal mb-0 me-3">Iniciar sesión con</p>
+            <button type="button" class="btn btn-primary btn-floating mx-1" aria-label="Iniciar sesión con Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </button>
+            <button type="button" class="btn btn-primary btn-floating mx-1" aria-label="Iniciar sesión con Twitter">
+              <i class="fab fa-twitter"></i>
+            </button>
+            <button type="button" class="btn btn-primary btn-floating mx-1" aria-label="Iniciar sesión con LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </button>
+          </div>
+
+          <!-- Separador -->
+          <div class="divider d-flex align-items-center my-4">
+            <p class="text-center fw-bold mx-3 mb-0">Ingresar con</p>
+          </div>
+
+          <!-- Campo de Email -->
+          <div class="form-outline mb-4">
+            <input type="email" id="form3Example3" class="form-control form-control-lg" placeholder="Introduce una dirección de email válida" required />
+            <label class="form-label" for="form3Example3">Email</label>
+            <div id="emailError" class="invalid-feedback">Por favor, introduce un email válido.</div>
+          </div>
+
+          <!-- Campo de Contraseña -->
+          <div class="form-outline mb-3">
+            <input type="password" id="form3Example4" class="form-control form-control-lg" placeholder="Introduce la contraseña" required />
+            <label class="form-label" for="form3Example4">Contraseña</label>
+            <div id="passwordError" class="invalid-feedback">La contraseña debe tener al menos 6 caracteres.</div>
+          </div>
+
+          <!-- Recordarme y Olvidaste Contraseña -->
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="form-check">
+              <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+              <label class="form-check-label" for="form2Example3">Recordarme</label>
+            </div>
+            <a href="#!" class="text-body">¿Ha olvidado la contraseña?</a>
+          </div>
+
+          <!-- Botón de Enviar y Enlace de Registro -->
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="submit" class="btn btn-primary btn-lg">Iniciar</button>
+            <p class="small fw-bold mt-2 pt-1 mb-0">¿No tienes cuenta? <a href="REGI.HTML">Registrar</a></p>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pie de Página -->
+  <footer>
+    <div class="text-white mb-3 mb-md-0">
+      Copyright © 2020. Todos los derechos reservados.
+    </div>
+    <div>
+      <a href="#!" class="text-white me-4">Política de Privacidad</a>
+      <a href="#!" class="text-white me-4"><i class="fab fa-facebook-f"></i></a>
+      <a href="#!" class="text-white me-4"><i class="fab fa-twitter"></i></a>
+      <a href="#!" class="text-white me-4"><i class="fab fa-google"></i></a>
+      <a href="#!" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </footer>
+
+</section>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>
+
+<!-- Script para Validación de Formulario -->
+<script>
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Evitar que se envíe el formulario
+
+    const email = document.getElementById('form3Example3').value;
+    const password = document.getElementById('form3Example4').value;
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailError = document.getElementById('emailError');
+    const passwordError = document.getElementById('passwordError');
+    
+    // Resetear mensajes de error
+    emailError.style.display = 'none';
+    passwordError.style.display = 'none';
+
+    // Validación de email
+    if (!emailPattern.test(email)) {
+      emailError.style.display = 'block';
+      document.getElementById('form3Example3').classList.add('is-invalid');
+      return;
+    } else {
+      document.getElementById('form3Example3').classList.remove('is-invalid');
+    }
+
+    // Validación de contraseña
+    if (password.length < 6) {
+      passwordError.style.display = 'block';
+      document.getElementById('form3Example4').classList.add('is-invalid');
+      return;
+    } else {
+      document.getElementById('form3Example4').classList.remove('is-invalid');
+    }
+
+    alert('Inicio de sesión exitoso.');
+  });
+</script>
+
+</body>
+</html>
